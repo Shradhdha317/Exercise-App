@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial';
+            margin: 0;
+        }
+        .menu {
+            width: 100%;
+            background-color: rgb(58, 55, 55);
+            font-weight: bold;
+            color: lavenderblush;
+        }
+        .menu > div {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            border-right: 1px solid rgb(58, 55, 55);
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+     <div class="menu">
+        <div>
+            Home
+        </div>
+        <div>
+            Videos
+        </div>
+        <div>
+            About
+        </div>  
+        <div>
+            Help
+        </div>
+        <div style="position: absolute; right : 30px";>
+            <button>Sign-in</button>
+        </div>
+        <div style="position: absolute; right : 120px";>
+            <button>Register</button>
+        </div>
+     </div>
+</body>
+</html>
