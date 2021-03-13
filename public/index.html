@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.png">
     <title><%= htmlWebpackPlugin.options.title %></title>
-  
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/core.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/components.css">
     <!-- main css -->
     <link rel="stylesheet" href="<%= BASE_URL %>css/bootstrap.css">
     <link rel="stylesheet" href="<%= BASE_URL %>css/fonts.css">
@@ -19,14 +20,21 @@
     <link href="<%= BASE_URL %>js/plugin/revolution/css/layers.css" rel="stylesheet" type="text/css">
     <link href="<%= BASE_URL %>js/plugin/revolution/css/navigation.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<%= BASE_URL %>css/style.css">
+     <script src="<%= BASE_URL %>js/jquery.js"></script>
+      <script src="<%= BASE_URL %>js/tether.min.js"></script>
+    <script src="<%= BASE_URL %>js/bootstrap.min.js"></script>
   </head>
   <body>
+    <div class="loader_wrapper">
+        <div class='loader'>
+            <img src="images/loader.gif" alt="loader">
+        </div>
+    </div>
    
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <script src="<%= BASE_URL %>js/jquery.js"></script>
-    <script src="<%= BASE_URL %>js/tether.min.js"></script>
-    <script src="<%= BASE_URL %>js/bootstrap.min.js"></script>
+   
+   
     <script src="<%= BASE_URL %>js/jquery.countTo.js"></script>
     <script src="<%= BASE_URL %>js/appear.js"></script>
     <script src="<%= BASE_URL %>js/wow.js"></script>

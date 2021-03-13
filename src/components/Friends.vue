@@ -1,0 +1,73 @@
+<template>
+<div>
+<div class="cy_bread_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h1>Friends List</h1>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="cy_event_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h1 class="cy_heading">Current Friends List</h1>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-12 col-md-12">
+                    <div class="cy_cart_box woocommerce">
+                        <table class="shop_table shop_table_responsive cart table-stripped">
+                            <thead>
+                                <tr>
+                                    <th class="product-thumbnail">Fullname</th>
+                                    <th class="product-name">Phone Number</th>
+                                    <th class="product-price">Email</th>
+                                    <th class="product-remove">Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(p, i) in friends" :key="i">
+                                    <td class="product-name">{{p.fname}}</td>
+                                    <td class="product-name">{{p.phone}}</td>
+                                    <td class="product-price">{{p.email}}</td>
+                                    <td><a class="btn btn-primary" href="#"> Show Activity </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+
+
+<script>
+import Vue from "vue";
+import Session, {GetUsers} from "../models/Session";
+export default Vue.extend({
+    data: ()=> ({
+        Session,
+        friends: []
+    }),
+    mounted() {
+        this.friends = GetUsers();
+    },
+    components: {
+        
+    },
+    methods: {
+        
+    }
+})
+</script>
+<style>
+    .woocommerce table.shop_table tbody tr td a{
+    color:#fff;
+    font-size:13px;
+    }
+</style>

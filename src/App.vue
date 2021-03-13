@@ -1,28 +1,20 @@
 <template>
   <div id="app">
-    
-    <HelloWorld/>
+  <headerView/>
+     <router-view/>
+    <footerView/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import headerView from './views/headerView.vue';
+import footerView from './views/footerView.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    headerView,
+    footerView
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
