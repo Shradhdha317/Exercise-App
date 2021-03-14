@@ -7,8 +7,8 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="cy_top_detail">
                         <ul>
-                            <li><a href="#">EMAIL: Info@indiarunning.com</a></li>
-                            <li>PHONE: 9898989898</li>
+                            <li><a href="#">EMAIL: patels18@hawkmail.newpaltz.edu</a></li>
+                            <li>PHONE: 8454199458</li>
                             
                             <li v-if="!Session.userData">
                             <ul>
@@ -34,7 +34,7 @@
         <h2 class="signin"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="#signin" data-toggle="modal">Sign In</a></h2>
         <h2 class="signup"><i class="fa fa-user-plus" aria-hidden="true"></i><a href="#signup" data-toggle="modal">Sign Up</a></h2>
     </div>
-    <!-- sign in modal -->
+    <!-- for sign in -->
     <div class="modal" id="signin">
         <div class="cy_signin">
             <div class="row">
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <!-- sign up modal -->
+    <!-- for sign up -->
     <div class="modal" id="signup">
         <div class="cy_signup">
             <div class="row">
@@ -91,7 +91,7 @@
     </div>
 <div class="cy_menu_wrapper">
     <div class="cy_logo_box">
-        <a><img src="images/main-logo.png" alt="logo" class="img-fluid" /></a>
+        <h1 class="cy_heading">Fitness Spire</h1>
     </div>
     <div class="container">
         <div class="row">
@@ -205,8 +205,8 @@ export default Vue.extend({
     }
 })
 </script>
-<style>
+<s>
 li{
     cursor:pointer;
 }
-</style>
+</s>

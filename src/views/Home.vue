@@ -35,8 +35,8 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]"
                                 data-paddingleft="[0,20,20,20]"
                                 style="z-index: 5; white-space: nowrap;text-transform:left;color:#ffffff;font-family: 'Montserrat', sans-serif;text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);text-transform:uppercase;">
-                                EXTREME
-                                <br>MOUNTAIN BIKE <br>ENTHUSIASTS
+                            
+                                <br>Regular exercise has <br>a direct bearing on <br> fitness and health.
                             </div>
                         </li>
                         <!--slide2-->
@@ -67,7 +67,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]"
                                 data-paddingleft="[0,20,20,20]"
                                 style="z-index: 5; white-space: nowrap;text-transform:left;color:#ffffff;font-family: 'Montserrat', sans-serif;text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);text-transform:uppercase;">
-                                for those, who <br>are interested in <br> bicycle riding
+                                for those, who <br>are interested in <br> health
                             </div>
                         </li>
                     </ul>
@@ -90,15 +90,15 @@
             <div class="col-lg-7 col-md-12">
                 <div class="cy_about_data">
                     <h1 class="cy_heading">ABOUT US</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
-
-                    <a href="#" class="cy_button">read more</a>
+                    <p>Fitness has now become an important element in our lives. you need one place to keep track of your
+                         most recent activities and work which you did for your heath and fitness, and this app allows you 
+                         and guide you throughout your way. Here, you can keep all the records of your exercises. The best 
+                         thing is that we are providing you the platform of making new friends who might has same goals as 
+                         you have and you can speak your mind without feeling judged whenever and wherever you need to. In 
+                         addition, you can also share your activities with your friends and keep each other on track with 
+                         se your goals, focus on your priorities as well as stay committed to be healthy and fit. 
+             
+                    </p>
                 </div>
             </div>
         </div>
@@ -106,43 +106,6 @@
 </div>
 
 
-<!--Our sponsors section start-->
-<div class="cy_sponsors_wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="cy_ride_text">
-                    <h3>Next Ride Start at</h3>
-                    <h2>April 20, 2018 - 10:30 Am</h2>
-                    <a href="#" class="cy_button">read more</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="cy_sponsor_slider cy_section_padding">
-                    <h1 class="cy_heading">our sponsors</h1>
-                    <div class="owl-carousel owl-theme" style="display: flex;">
-                        <div class="item">
-                            <img src="images/sponsors/brand1.png" alt="sponsor" />
-                        </div>
-                        <div class="item">
-                            <img src="images/sponsors/brand2.png" alt="sponsor" />
-                        </div>
-                        <div class="item">
-                            <img src="images/sponsors/brand3.png" alt="sponsor" />
-                        </div>
-                        <div class="item">
-                            <img src="images/sponsors/brand4.png" alt="sponsor" />
-                        </div>
-                        <div class="item">
-                            <img src="images/sponsors/brand1.png" alt="sponsor" />
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 </template>
 
