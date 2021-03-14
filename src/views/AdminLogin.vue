@@ -37,16 +37,7 @@
                 <button class="btn btn-primary">Sign in</button>
            
             </form>
-            <div class="row"> 
-                <ul>
-                    <li>
-                    Demo Username : Admin
-                    </li>
-                    <li>
-                    Demo Passwors : admin@123
-                    </li>
-                </ul>
-            </div>
+        
         </div>
     
 </div>
