@@ -83,7 +83,7 @@
                             <input v-model="password" type="password" placeholder="Password" class="form-control">
                             <button class="cy_button">register</button>
                          </form>
-                        <p>Already Have An Account? <a class="cy_modal" href="#signin" data-toggle="modal">Sign In</a></p>
+                        <p>Already Have An Account? <a href="#signin" data-toggle="modal" class="cy_modal">Sign In</a></p>
                     </div>
                 </div>
             </div>
