@@ -48,7 +48,7 @@
                             data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
                             data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="js/plugin/revolution/assets/main_banner1.jpg" alt="banner"
+                            <img src="js/plugin/revolution/assets/main_banner1.webp" alt="banner"
                                 data-bgposition="center center" data-kenburns="on" data-duration="2000"
                                 data-ease="Power2.easeOut" data-scalestart="110" data-scaleend="100"
                                 data-rotatestart="0" data-rotateend="0" data-offsetstart="0 500" data-offsetend="0 -500"

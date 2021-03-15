@@ -29,27 +29,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="product-thumbnail"><a href="#"><img src="images/cart/1.jpg" alt="cart thumbnail" class="img-fluid"></a></td>
-                                    <td class="product-name">Racing</td>
-                                    <td class="product-price">Ahmedabad</td>
-                                    <td class="product-remove"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="product-thumbnail"><a href="#"><img src="images/cart/1.jpg" alt="cart thumbnail" class="img-fluid"></a></td>
-                                    <td class="product-name">Racing</td>
-                                    <td class="product-price">Ahmedabad</td>
-                                    <td class="product-remove"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
-                                </tr>
-                                 <tr>
-                                    <td class="product-thumbnail"><a href="#"><img src="images/cart/1.jpg" alt="cart thumbnail" class="img-fluid"></a></td>
-                                    <td class="product-name">Racing</td>
-                                    <td class="product-price">Ahmedabad</td>
-                                    <td class="product-remove"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
-                                </tr>
-                                 <tr>
-                                    <td class="product-thumbnail"><a href="#"><img src="images/cart/1.jpg" alt="cart thumbnail" class="img-fluid"></a></td>
-                                    <td class="product-name">Racing</td>
-                                    <td class="product-price">Ahmedabad</td>
+                                    <td class="product-thumbnail" style="height: 100px; width: 100px"><a href="#"><img src="images/cart/1.jpg" alt="cart thumbnail" class="img-fluid"></a></td>
+                                    <td class="product-name">Physical Exercise with Friends</td>
+                                    <td class="product-price">New York</td>
                                     <td class="product-remove"><a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                                 </tr>
                             </tbody>
