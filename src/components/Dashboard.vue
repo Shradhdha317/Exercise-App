@@ -13,9 +13,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-12">
-                    <div class="coupon">
+                 <div style="display: table;width: 100%;" class="row">
+                    <div style="float:left;" class="coupon">
                         <h2>Activity History</h2>
                     </div>
+                    <div style="float:right;" class="coupon">
+                        <a href="#activity_form" data-toggle="modal" class="btn btn-primary">Add Activity</a>
+                    </div>
+                 </div>
                     <br/>
                     <div class="cy_cart_box woocommerce">
                         <table class="shop_table shop_table_responsive cart table-stripped">
@@ -68,7 +73,7 @@
                                 </table>
                             </div>
                             <div class="wc-proceed-to-checkout">
-                                <a href="checkout.html" class="cy_button">Update Profile</a>
+                                <a href="#" class="cy_button">Update Profile</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +81,33 @@
             </div>
         </div>
     </div>
+     <div class="modal" id="activity_form">
+        <div class="cy_signup">
+            <div class="row">
+               
+                <div class="col-lg-12 col-md-12">
+                    <div class="cy_sign_form">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h1>Add Your Activity</h1>
+                         <form id="form">
+                         <input  type="text" placeholder="Activity Name" class="form-control">
+                        
+                         <input type="file" class="form-control">
+                            <textarea placeholder="Activity Description" class="form-control"></textarea>
+                            <input  type="text" placeholder="Activity Place" class="form-control">
+                            <button class="cy_button">Add Activity</button>
+                         </form>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 </template>
 
 

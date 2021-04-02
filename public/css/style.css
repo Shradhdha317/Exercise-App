@@ -379,7 +379,7 @@ ul.cart_box li .cart_section a.cy_button{
     position: absolute;
     width: 291px;
     background-color: #f27131;
-    padding: 42px 85px;
+    padding: 10px 15px;
     text-align: right;
     top: -50px;
     z-index: 1;
@@ -401,7 +401,7 @@ ul.cart_box li .cart_section a.cy_button{
 }
 .cy_logo_box img {
     display: inline-block;
-    margin-left: -51px;
+    height: 125px;
 }
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
@@ -772,7 +772,6 @@ button.cy_menu_btn {
 h1.cy_heading {
     font-size: 30px;
     font-weight: 800;
-    margin-bottom: 35px;
     text-transform: uppercase;
 }
 .cy_about_data h1.cy_heading {

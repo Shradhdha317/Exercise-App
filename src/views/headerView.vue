@@ -91,7 +91,7 @@
     </div>
 <div class="cy_menu_wrapper">
     <div class="cy_logo_box">
-        <h1 class="cy_heading">Fitness Spire</h1>
+        <h1 class="cy_heading"><img src="images/logo.png"/></h1>
     </div>
     <div class="container">
         <div class="row">
