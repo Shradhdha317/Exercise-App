@@ -45,14 +45,17 @@
 
 <script>
 import Vue from "vue";
-import Session, {GetUsers} from "../models/Session";
+import Session from "../models/Session";
+import { api } from "../models/allFetch";
 export default Vue.extend({
     data: ()=> ({
         Session,
         friends: []
     }),
     mounted() {
-        this.friends = GetUsers();
+        (async ()=>{
+            this.friends = await api("signup");
+        })()
     },
     components: {
         
