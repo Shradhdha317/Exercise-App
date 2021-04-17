@@ -151,8 +151,8 @@
 <script src="js/jquery.js"></script>
 <script>
 import Vue from "vue";
-import Session, { userLogin, userLogout,userStore } from "../models/Session";
-
+import Session, { userLogin, userLogout } from "../models/Session";
+import { api } from "../models/allFetch";
 export default Vue.extend({
     data: ()=> ({
         Session,
@@ -165,38 +165,26 @@ export default Vue.extend({
         user:[],
     }),
     methods: {
-        signup(){
+      async signup(){
            var v = {'fname':this.fname,'email':this.email,'phone':this.phone,'password':this.password};
-            this.user.push(v);
+           const user = await api("signup",v);
             this.fname = '';
             this.email = '';
             this.phone = '';
             this.password = '';
-            userStore(v);
-            alert('Successfully Registered!');
+            if(user != '')
+            {
+                 alert('Successfully Registered!');
+            }
+           else{
+               alert('Not Successfully Registered!'); 
+           }
+           $('#signup').modal('hide');
+           $('#signin').modal('show');
         },
         signin(){
-           var status = 0; 
-           var phn = 0;
-           var fnam = '';
-           for(var i=0;i<this.user.length;i++){
-            if(this.username == this.user[i].email && this.pass == this.user[i].password)
-            {
-              phn = this.user[i].phone;
-              fnam = this.user[i].fname;
-              status = 1;
-              break;
-            }
-           }
-           if(status == 1)
-           {
-             alert('successfully Login!');
-             userLogin(phn,this.username,fnam,this.pass);
-             $('#signin').modal('hide');
-           }
-           else{
-             alert('Invalid Username or Password!');
-           }
+           userLogin(this.username, this.pass);
+           $('#signin').modal('hide');     
         },
         logout(){
             alert('successfully Logout!');

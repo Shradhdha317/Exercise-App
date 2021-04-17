@@ -16,5 +16,9 @@ const app = express.Router();
         .delete('/:user_id', (req, res)=>{
              res.send(model.Deleteuser(req.params.user_id)) 
         })
-
+        .post('/login', (req, res, next)=> { 
+            usermodel.userLogin(req.body.username, req.body.password)
+            .then(user=> res.send(user))
+            .catch(next);
+        })
 module.exports = app;
