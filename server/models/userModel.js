@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const SALT_ROUNDS = process.env.SALT_ROUNDS;
-const JWT_SECRET = process.env.JWT_SECRET;
+const SALT_ROUNDS = 'SHRADHDHA';
+const JWT_SECRET = 'SECRET';
 const userlist = [
         { 
         fname: 'shradhdha',
@@ -37,7 +37,6 @@ module.exports.userRegister = async (user)=> {
     user.password = hash;
     user.isAdmin = false;
     userlist.push(user);
-    console.log({ ...user, password: undefined });
     return { ...user, password: undefined };
 }
 module.exports.Updateuser = (user_id, user)=> {
@@ -62,14 +61,25 @@ module.exports.Deleteuser = (user_id)=> {
         return user;
 }
 module.exports.userLogin = async (username, password) =>{
-    const user = userlist.find(x => x.email === username);
-    if(!user) throw { code: 401, msg: "Sorry there is no user with that email or username" };
-    if( ! await bcrypt.compare(password, user.password) ){
+    var k = -1;
+    for(var i=0;i<userlist.length;i++)
+    {
+        if(username == userlist[i].email)
+        {
+           k = i;
+        }
+    }
+   
+    if(k == -1) throw { code: 401, msg: "Sorry there is no user with that email or username" };
+    
+    if( ! await bcrypt.compare(password, userlist[k].password) ){
             throw { code: 401, msg: "Wrong Password" };
     }
-    const data = { ...user, password: undefined };
-    const token = jwt.sign(data, JWT_SECRET)
-    console.log({ user: data, token });
+    
+    const data = { ...userlist[k], password: undefined };
+    
+    const token = jwt.sign(data, JWT_SECRET,{ expiresIn: '7d' })
+    
     return { user: data, token };
 }
 module.exports.FromJWT = async (token) =>{

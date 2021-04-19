@@ -7,8 +7,10 @@ const app = express.Router();
         .get('/', (req, res)=>{
             res.send(usermodel.GetAllUser());         
         })
-        .post('/', (req, res)=> { 
-            res.send( usermodel.userRegister(req.body) );
+        .post('/', (req, res,next)=> { 
+            usermodel.userRegister(req.body) 
+            .then(user=> res.send(user))
+            .catch(next);
         })
         .get('/:user_id',(req, res)=> {
             res.send(usermodel.GetUser(req.params.user_id) )

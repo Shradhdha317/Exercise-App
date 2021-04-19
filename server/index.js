@@ -1,9 +1,9 @@
+const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
+dotenv.config();
 const cors = require('cors');
 const signupController = require('./controllers/signup');
-dotenv.config();
-
 const app = express();
 const port = process.env.PORT || 3000;
 
