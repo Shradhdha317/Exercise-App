@@ -72,7 +72,7 @@ export default Vue.extend({
         this.message = "successfully removed!!"
       },
         getImgUrl(value) {
-            const url = 'http://localhost:3000/'+value;
+            const url = 'http://localhost:3000/uploads/'+value;
             return url;
         },
         getActivity()

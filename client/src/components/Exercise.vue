@@ -20,7 +20,7 @@
                 <div class="col-lg-4 col-md-6" v-for="(p, i) in exercise" :key="i">
                     <div class="cy_event_box">
                         <div class="cy_event_img">
-                            <img :src="p.file" alt="" class="img-fluid" />
+                            <img :src="getImgUrl(p.file)" alt="" class="img-fluid" />
                             <div class="cy_event_detail">
                                 <div class="cy_event_time">
                                     <ul>
@@ -64,7 +64,7 @@ export default Vue.extend({
     },
     methods: {
         getImgUrl(value) {
-        const url = '../http://localhost:8080/uploads/'+value;
+        const url = 'http://localhost:3000/uploads/'+value;
         return url;
         },
     }

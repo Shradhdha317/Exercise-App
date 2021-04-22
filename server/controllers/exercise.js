@@ -5,7 +5,7 @@ const path = require('path');
 const exerciselist = [
     { 
         id:1,
-        file: "images/event/event1.jpg",
+        file: "event1.jpg",
         title: "Gym Time",
         description: "Just crushed this workout.",
         time: '7:00PM',
@@ -13,7 +13,7 @@ const exerciselist = [
     },
     { 
         id:2,
-        file: "images/event/event4.jpg",
+        file: "event4.jpg",
         title: "Morning Exercise",
         description: "Go for it.",
         time: '9:00AM',
@@ -21,7 +21,7 @@ const exerciselist = [
     },
     { 
         id:3,
-        file: "images/event/event3.jpg",
+        file: "event3.jpg",
         title: "Stretching Exercise",
         description: "Fit and fab!",
         time: '10:00PM',
@@ -29,7 +29,7 @@ const exerciselist = [
     },
     { 
         id:4,
-        file: "images/event/event2.jpg",
+        file: "event2.jpg",
         title: "Stretch Your Body",
         description: "Do something today that your future self will thank you for.",
         time: '5:00PM',

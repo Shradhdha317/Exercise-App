@@ -30,10 +30,7 @@
         </div>
     </div>
 </div>
- <div v-if="!Session.userData" class="cy_sign_wrapper">
-        <h2 class="signin"><i class="fa fa-sign-in" aria-hidden="true"></i><a href="#signin" data-toggle="modal">Sign In</a></h2>
-        <h2 class="signup"><i class="fa fa-user-plus" aria-hidden="true"></i><a href="#signup" data-toggle="modal">Sign Up</a></h2>
-    </div>
+
     <!-- for sign in -->
     <div class="modal" id="signin">
         <div class="cy_signin">

@@ -44,7 +44,7 @@
                                     <td>{{p.activity_desc}}</td>
                                     <td>{{p.activity_place}}</td>
                                     <td>{{p.activity_type}}</td>
-                                    <td class="product-remove"><a @click.prevent="Ldelete(p.activity_id)" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+                                    <td class="product-remove"><a style="color:red !important;" @click.prevent="Ldelete(p.activity_id)" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -168,7 +168,7 @@ export default {
         this.message = "successfully removed!!"
       },
     getImgUrl(value) {
-        const url = 'http://localhost:3000/'+value;
+        const url = 'http://localhost:3000/uploads/'+value;
         return url;
     },
     getActivity()
@@ -227,7 +227,8 @@ export default {
 }
 </script>
 <style>
-.woocommerce table.shop_table tbody tr td a{
-    color:#d61111 !important;
+
+.product-remove a{
+     color:#d61111 !important;
 }
 </style>

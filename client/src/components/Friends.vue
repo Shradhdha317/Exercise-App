@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <h1 class="cy_heading">All users List</h1>
+                    <h1 class="cy_heading">Un Friends List</h1>
                 </div>
             </div>
             <div style="margin-top:2%;" class="row">
@@ -71,7 +71,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <h1 class="cy_heading"> Choose your friends from this List</h1>
+                    <h1 class="cy_heading"> Friend Request List</h1>
                 </div>
             </div>
         <div style="margin-top:2%;" class="row">

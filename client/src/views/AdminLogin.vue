@@ -7,11 +7,13 @@
 <div class="content-wrapper">
 <!-- Content area -->
 <div class="row a" v-if="Session.userData">
+<div v-if="Session.userData.isAdmin == true">
     <h3 style="color:blue;">Welcome, {{Session.userData.uname}}</h3>
     <div  class="col-md-12">
     <router-link to="/adminhome" class="navbar-item">
       Go: Admin Dashboard
     </router-link>
+    </div>
     </div>
 </div>
 <div class="content">

@@ -10,7 +10,7 @@ const activitylist = [
     activity_name: 'A',
     activity_desc: 'Xyz',
     activity_place: 'A',
-    file:'',
+    file:'1601660004690.jpg',
     id:2
     }
 ];
@@ -71,7 +71,7 @@ app.get('/getActivityadmin',(req, res)=>{
         }
         var user  = '';
         user = {
-            activity_id: activitylist[i].id,
+            activity_id: activitylist[i].activity_id,
             activity_type: activitylist[i].activity_type,
             activity_name: activitylist[i].activity_name,
             activity_desc: activitylist[i].activity_desc,

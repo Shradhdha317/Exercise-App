@@ -75,7 +75,7 @@ export default {
   methods: {
       
     getImgUrl(value) {
-        const url = 'http://localhost:3000/'+value;
+        const url = 'http://localhost:3000/uploads/'+value;
         return url;
     },
     getActivityUser()
