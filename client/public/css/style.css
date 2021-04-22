@@ -1183,11 +1183,11 @@ h1.cy_heading {
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
 }
 .cy_event_data h2 {
     font-size: 18px;
@@ -3516,13 +3516,11 @@ h3.widget-title:before {
 .woocommerce table.shop_table thead tr th{
     padding:10px 0px;
     text-align: center;
-    width:25%;
 }
 .woocommerce table.shop_table tbody tr td{
     padding:25px 0px;
     text-align: center;
     font-size: 15px;
-    width:25%;
 }
 .woocommerce table.shop_table tbody tr td.product-thumbnail a{
     border:1px solid #e1e1e1;

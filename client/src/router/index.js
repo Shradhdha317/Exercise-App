@@ -7,6 +7,9 @@ import Friends from '../components/Friends.vue';
 import AdminLogin from '../views/AdminLogin.vue';
 import AdminHome from '../views/AdminHome.vue';
 import userList from '../components/userList.vue';
+import activityList from '../components/activityList.vue';
+import exerciseLog from '../components/exerciseLog.vue';
+import showActivity from '../components/showActivity.vue';
 //import Session from "../models/Session";
 
 Vue.use(VueRouter)
@@ -30,7 +33,18 @@ const routes = [
     path: '/userList',
     name: "userList",
     component: userList
-  }
+  },
+  {
+    path:'/activityList',
+    name:"activityList",
+    component:activityList
+  },
+  {
+    path:'/exerciseLog',
+    name:"exerciseLog",
+    component:exerciseLog
+  },
+  { path: '/showActivity/:id', component: showActivity }
 ]
 
 const router = new VueRouter({
@@ -40,12 +54,10 @@ const router = new VueRouter({
 })
 
 // router.beforeEach( (to, from, next) =>{
-//     console.log({ from, to })
-//     if(to.path == '/dashboard' && !Session.userData){
-//     next('/');
-//     }else{
-//       next('/dashboard');
-//     }
+//   if(!Session.userData){
+//       next('/') 
+//   }else{
+//     next();
+//   }
 // } )
-
 export default router

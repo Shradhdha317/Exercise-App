@@ -6,8 +6,8 @@
 <!-- Main content -->
 <div class="content-wrapper">
 <!-- Content area -->
-<div class="row a" v-if="AdminSession.adminData">
-    <h3 style="color:blue;">Welcome, {{AdminSession.adminData.uname}}</h3>
+<div class="row a" v-if="Session.userData">
+    <h3 style="color:blue;">Welcome, {{Session.userData.uname}}</h3>
     <div  class="col-md-12">
     <router-link to="/adminhome" class="navbar-item">
       Go: Admin Dashboard
@@ -51,29 +51,22 @@
 </template>
 <script>
 import Vue from "vue";
-import AdminSession, { adminLogin, adminLogout } from "../models/AdminSession";
+import Session, { userLogin, userLogout } from "../models/Session";
 
 export default Vue.extend({
     data: ()=> ({
-        AdminSession,
+        Session,
         uname:'',
         password:'',
     }),
     methods: {
         signin(){
-           
-            if(this.uname == 'Admin' && this.password == 'admin@123')
-            {
-                alert('successfully Login!');
-                adminLogin(this.uname);
-            }
-           else{
-             alert('Invalid Username or Password!');
-           }
+            userLogin(this.uname, this.password,true,'admin');
+            
         },
         logout(){
             alert('successfully Logout!');
-            adminLogout();
+            userLogout();
         }
     }
 })

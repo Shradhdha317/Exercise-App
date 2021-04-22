@@ -1,36 +1,20 @@
-import { ToastProgrammatic as toastr } from "buefy";
+
 import { api } from "../models/allFetch";
 const Session = {
     userData: null,
     msg: [],
-    token:null,
-    userList:[],
+    token:null
 }
 export default Session;
 
-export async function userLogin(username, password){
-    var data =  { 'username':username, 'password':password };
+export async function userLogin(username, password,isAdmin,type){
+    var data =  { 'username':username, 'password':password ,'isAdmin':isAdmin,'type':type};
     const {user, token} = await api('signup/login',data)
     Session.userData = user;
     Session.token = token;
-    toastr.open({
-        type: 'is-success',
-        message: `Welcome ${Session.userData.fname}`
-    })
-}
-
-export function GetUsers() {
-	return Session.userList;
 }
 
 export function userLogout(){
     Session.userData = null
 }
 
-export function toastError(msg){
-    toastr.open({
-        message: msg,
-        queue: false,
-        type: 'is-danger'
-    })
-}

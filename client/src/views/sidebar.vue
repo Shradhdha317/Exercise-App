@@ -28,21 +28,22 @@
             <ul class="navigation navigation-main navigation-accordion">
               <!-- Main -->
               <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-              <li><a href="#"><i class="icon-home4"></i> <span>Dashboard</span></a>
+             
+              <li>
+                <router-link to="/activityList" class="navbar-item">
+                  Activity List
+                </router-link>
               </li>
-              <!-- Forms -->
-              <li class="navigation-header"><span>Navigation</span> <i class="icon-menu" title="Forms"></i></li>
                <li>
                <router-link to="/userList" class="navbar-item">
-                  UserList
+                  User List
                </router-link>
               </li>
-              <li>
-               <a  v-on:click="Logout" class="navbar-item">
-                  Logout
-               </a>
+               <li>
+               <router-link to="/exerciseLog" class="navbar-item">
+                  Exercise Log 
+               </router-link>
               </li>
-
             </ul>
           </div>
         </div>
@@ -58,10 +59,7 @@ export default {
     msg: String
   },
    methods: {
-      Logout: function () {
-           alert('successfully logout');
-           window.location.href='/';
-       }
+     
    }
 }
 </script>

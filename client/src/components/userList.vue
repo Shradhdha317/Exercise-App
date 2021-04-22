@@ -1,7 +1,7 @@
 <template>
 <div>
 <!-- Page container -->
-<div class="page-container" style="min-height: 611px;    margin-top: 5%;">
+<div class="page-container" style="min-height: 611px;    margin-top: 7%;">
 
   <!-- Page content -->
   <div class="page-content">
@@ -27,7 +27,7 @@
                                     <td class="product-name">{{p.fname}}</td>
                                     <td class="product-name">{{p.phone}}</td>
                                     <td class="product-price">{{p.email}}</td>
-                                    <td><a class="btn btn-primary" href="#"> Show User Statistics </a></td>
+                                    <td><a @click="getUrl(p.id)" class="btn btn-primary"> Show Activity </a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -61,7 +61,9 @@ export default Vue.extend({
         
     },
     methods: {
-        
+        getUrl(id){
+            this.$router.push('/showActivity/'+id+'');
+        }
     }
 })
 </script>

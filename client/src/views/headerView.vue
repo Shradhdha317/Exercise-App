@@ -172,23 +172,19 @@ export default Vue.extend({
             this.email = '';
             this.phone = '';
             this.password = '';
-            if(user != '')
-            {
-                 alert('Successfully Registered!');
-            }
-           else{
-               alert('Not Successfully Registered!'); 
-           }
+            
            $('#signup').modal('hide');
            $('#signin').modal('show');
         },
         signin(){
-           userLogin(this.username, this.pass);
+           userLogin(this.username, this.pass,false,'user');
+          
            $('#signin').modal('hide');     
         },
         logout(){
             alert('successfully Logout!');
             userLogout();
+            window.location.href='/';
         }
     }
 })

@@ -19,7 +19,12 @@ const app = express.Router();
              res.send(model.Deleteuser(req.params.user_id)) 
         })
         .post('/login', (req, res, next)=> { 
-            usermodel.userLogin(req.body.username, req.body.password)
+            usermodel.userLogin(req.body.username, req.body.password,req.body.isAdmin,req.body.type)
+            .then(user=> res.send(user))
+            .catch(next);
+        })
+        .post('/getUserDetails', (req, res, next)=> { 
+            usermodel.getUserDetails(req.body.id)
             .then(user=> res.send(user))
             .catch(next);
         })

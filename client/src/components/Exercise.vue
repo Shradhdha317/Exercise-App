@@ -20,7 +20,7 @@
                 <div class="col-lg-4 col-md-6" v-for="(p, i) in exercise" :key="i">
                     <div class="cy_event_box">
                         <div class="cy_event_img">
-                            <img :src="p.src" alt="" class="img-fluid" />
+                            <img :src="p.file" alt="" class="img-fluid" />
                             <div class="cy_event_detail">
                                 <div class="cy_event_time">
                                     <ul>
@@ -30,14 +30,12 @@
                                 </div>
                                 <div class="cy_event_date">
                                     <span class="ev_date">{{p.date}}</span>
-                                    <span class="ev_yr">2021</span>
                                 </div>
                             </div>
                         </div>
                         <div class="cy_event_data">
                             <h2><a href="#">{{p.title}}</a></h2>
                             <p>{{p.description}}</p>
-                            <a href="#" class="cy_button">Share With Friends</a>
                         </div>
                     </div>
                 </div>
@@ -51,20 +49,24 @@
 <script>
 import Vue from "vue";
 import Session from "../models/Session";
-import {GetExerciseLog} from "../models/Exercise";
+import { api } from "../models/allFetch";
 export default Vue.extend({
-    data: ()=> ({
-        Session,
-        exercise: []
-    }),
-    mounted() {
-        this.exercise = GetExerciseLog();
+     data() {
+      return {
+      Session,
+      exercise: []
+    }
     },
-    components: {
-        
+    mounted() {
+         (async ()=>{
+                this.exercise = await api("exerciseStore/getExercise");
+            })()
     },
     methods: {
-        
+        getImgUrl(value) {
+        const url = '../http://localhost:8080/uploads/'+value;
+        return url;
+        },
     }
 })
 </script>
