@@ -39,7 +39,7 @@ app
       res.send( { msg: err.msg });
     })
 
-    app.get(/.*/, function (req, res) {
+    app.get("/", function (req, res) {
       res.sendFile(path.join(__dirname, '../Exercise-App/client/public/index.html'))
     })
 
