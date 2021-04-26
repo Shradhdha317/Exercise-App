@@ -79,9 +79,6 @@
                                     </tfoot>
                                 </table>
                             </div>
-                            <div class="wc-proceed-to-checkout">
-                                <a href="#" class="cy_button">Update Profile</a>
-                            </div>
                         </div>
                     </div>
                 </div>
