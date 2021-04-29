@@ -24,18 +24,13 @@ Project:	Cycling  - Responsive HTML Template
             this.Fixedmenu();
             this.Togglemenu();
             this.Slider();
-            this.Counter();
-            this.Sponsors();
-            this.Result();
-            this.Grid_List_view();
-            this.Range_slider();
-            this.Store();
-            this.Gallery();
+            
+          
             this.Search();
-            this.Thumbnail_slider();
+          
             this.Popup();
             this.Select();
-			this.Wow();
+			
         },
         /*-------------- Cycling Functions definition ---------------------------------------------------
         ---------------------------------------------------------------------------------------------------*/
@@ -153,139 +148,6 @@ Project:	Cycling  - Responsive HTML Template
                 });
             }
         },
-        //Counter
-        Counter: function() {
-            if ($('.cy_count_box').length > 0) {
-                $('.cy_count_box').appear(function() {
-                    $('.cy_counter_num').countTo();
-                });
-            }
-        },
-        //Sponsors Slider
-        Sponsors: function() {
-            $('.cy_sponsor_slider .owl-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: false,
-                dots: false,
-                autoplaySpeed: 1500,
-                autoplay: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    800: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            })
-        },
-        //Result Slider
-        Result: function() {
-            $('.cy_result_slider .owl-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: true,
-                dots: false,
-                navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>' ],
-                autoplaySpeed: 1500,
-                autoplay: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    800: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            })
-        },
-        // Grid List view
-        Grid_List_view:function(){
-            if($('.cy_shop_view').length > 0){
-                $('.cy_shop_view').on('click', 'li', function() {
-                    $('.cy_shop_view ul li.active').removeClass('active');
-                    $(this).addClass('active');
-                });
-                $('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
-                $('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
-            }
-        },
-        // Range_slider
-        Range_slider:function(){
-            if($('.widget_price').length > 0){
-                $( function() {
-                    $( "#slider-range" ).slider({
-                        range: true,
-                        min: 0,
-                        max: 10000,
-                        values: [ 2000, 8000 ],
-                        slide: function( event, ui ) {
-                            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                        }
-                    });
-                    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-                });
-            }
-        },
-        //Store Slider
-        Store: function() {
-            $('.cy_store_slider .owl-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: true,
-                dots: false,
-                navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>' ],
-                autoplaySpeed: 1500,
-                autoplay: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    800: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
-                }
-            })
-        },
-        //Gallery
-        Gallery: function() {
-            $('.cy_gallery_wrapper').magnificPopup({
-                delegate: 'a.fa-search',
-                type: 'image',
-                mainClass: 'mfp-with-zoom',
-                gallery: {
-                    enabled: true,
-                },
-                zoom: {
-                    enabled: true,
-                    duration: 400,
-                    easing: 'ease-in-out',
-                    opener: function(openerElement) {
-                        return openerElement.is('a') ? openerElement : openerElement.find('img');
-                    }
-                },
-            });
-        },
         Search: function() {
             $('.search_open').on('click',function(){
                 $('.cy_search_form').addClass('search_opened')  
@@ -294,78 +156,7 @@ Project:	Cycling  - Responsive HTML Template
                 $('.cy_search_form').removeClass('search_opened')  
             });
         },
-        Thumbnail_slider: function(){
-            var sync1 = $("#sync1");
-              var sync2 = $("#sync2");
-              var slidesPerPage = 4;
-              var syncedSecondary = true;
-              sync1.owlCarousel({
-                items : 1,
-                slideSpeed : 2000,
-                nav: false,
-                autoplay: true,
-                dots: false,
-                mouseDrag: false,
-                loop: true,
-                responsiveRefreshRate : 200,
-                navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>','<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-              }).on('changed.owl.carousel', syncPosition);
-
-              sync2
-                .on('initialized.owl.carousel', function () {
-                  sync2.find(".owl-item").eq(0).addClass("current");
-                })
-                .owlCarousel({
-                items : slidesPerPage,
-                dots: false,
-                nav: false,
-                autoplay:false,
-                mouseDrag: false,
-                responsiveRefreshRate : 100
-              }).on('changed.owl.carousel', syncPosition2);
-
-              function syncPosition(el) {
-                var count = el.item.count-1;
-                var current = Math.round(el.item.index - (el.item.count/2) - .5);
-                
-                if(current < 0) {
-                  current = count;
-                }
-                if(current > count) {
-                  current = 0;
-                }
-                
-                sync2
-                  .find(".owl-item")
-                  .removeClass("current")
-                  .eq(current)
-                  .addClass("current");
-                var onscreen = sync2.find('.owl-item.active').length - 1;
-                var start = sync2.find('.owl-item.active').first().index();
-                var end = sync2.find('.owl-item.active').last().index();
-                
-                if (current > end) {
-                  sync2.data('owl.carousel').to(current, 100, true);
-                }
-                if (current < start) {
-                  sync2.data('owl.carousel').to(current - onscreen, 100, true);
-                }
-              }
-              
-              function syncPosition2(el) {
-                if(syncedSecondary) {
-                  var number = el.item.index;
-                  sync1.data('owl.carousel').to(number, 100, true);
-                }
-              }
-              
-              sync2.on("click", ".owl-item", function(e){
-                e.preventDefault();
-                var number = $(this).index();
-                sync1.data('owl.carousel').to(number, 300, true);
-              });
-
-        },
+       
 		Popup:function(){
 		   $('.cy_modal').on('click', function(){
 			$('.modal-open #signin').hide();
@@ -377,10 +168,7 @@ Project:	Cycling  - Responsive HTML Template
 		Select:function(){
 		  $('select:not(.ignore)').niceSelect();
 		},
-        //Wow
-        Wow: function() {
-            new WOW().init();
-        },
+      
     };
     $(document).ready(function() {
         cycling.init();

@@ -33,7 +33,13 @@ Author: Kamleshyadav
 19.shop single page
 20.media css
 -------------------------------------------------------------------*/
-
+.abcd{
+    height: 60px;
+width: 20px;
+position: fixed;
+bottom: 10px;
+right: 50px;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
@@ -783,103 +789,6 @@ h1.cy_heading {
 }
 .cy_about_data a.cy_button {
     margin-top: 15px;
-}
-.cy_team_wrapper {
-    padding: 50px 0px 100px 0px;
-}
-.cy_team_box {} .cy_team_box {
-    position: relative;
-    overflow: hidden;
-}
-.cy_team_box img {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: -webkit-transform 0.5s;
-    -moz-transition: -moz-transform 0.5s;
-    -o-transition: -o-transform 0.5s;
-    -ms-transition: -o-transform 0.5s;
-    transition: transform 0.5s;
-}
-.cy_team_box:hover img {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-}
-.cy_team_overlay {
-    position: absolute;
-    width: auto;
-    top: 0;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    border-bottom: 5px solid #fff;
-    overflow: hidden;
-    z-index: 50;
-}
-.cy_team_text {
-    position: relative;
-    z-index: 1;
-    padding: 50px 20px 10px 20px;
-    margin-top: 92%;
-    text-align: center;
-    opacity: 1;
-    transform: translateY(200%);
-    -webkit-transform: translateY(200%);
-    -moz-transform: translateY(200%);
-    -ms-transform: translateY(200%);
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-}
-.cy_team_text:after {
-    content: "";
-    width: auto;
-    height: 200%;
-    background-color: rgba(255, 113, 42, 0.92);
-    position: absolute;
-    top: 0;
-    left: 5px;
-    right: 5px;
-    -webkit-transform: skewx(-15deg);
-    -moz-transform: skewx(-15deg);
-    -o-transform: skewx(-15deg);
-    transform: skewy(-15deg);
-    z-index: -1;
-    -webkit-transition: opacity 0.35s, color 0.35s;
-    -moz-transition: opacity 0.35s, color 0.35s;
-    -ms-transition: opacity 0.35s, color 0.35s;
-    -o-transition: opacity 0.35s, color 0.35s;
-    transition: opacity 0.35s, color 0.35s;
-}
-.cy_team_text h2 {
-    margin: 0px;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-weight: 400;
-}
-.cy_team_text h2 a {
-    color: #ffffff;
-}
-.cy_team_text p {
-    color: #ffffff;
-    margin: 0px;
-    font-size: 15px;
-}
-.cy_team_box:hover .cy_team_text {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
 }
 .cy_achieve_wrapper {
     background-image: url(../images/achieve/wrapper.jpg);
@@ -2015,16 +1924,7 @@ ul.cy_blog_info li:hover a {
 .cy_sponsor_slider .owl-carousel .owl-item img {
     width: auto;
 }
-.cy_footer_wrapper {
-    background-color: #2f3942;
-}
-.footer-widget.cy_footer_about p {
-    padding-top: 14px;
-    color: #9faebc;
-    line-height: 26px;
-    margin: 0px;
-    font-weight: 300;
-}
+
 h1.widget-title {
     font-size: 18px;
     color: #ffffff;
@@ -2155,18 +2055,7 @@ h1.widget-title {
 .cy_foo_gallery ul li:last-child a {
     margin-right: 0px;
 }
-.cy_btm_footer {
-    background-color: #283139;
-    padding: 20px 0px;
-    text-align: center;
-}
-.cy_btm_footer p {
-    margin: 0px;
-    color: #9faebc;
-}
-.cy_btm_footer p a {
-    color: #ff712a;
-}
+
 /*==Go To Top Css Start==*/
 
 .cy_go_to {
@@ -4322,13 +4211,7 @@ h3.widget-title:before {
     .cy_event_det_box {
         margin-bottom: 30px;
     }
-    .cy_team_box {
-        position: relative;
-        margin-bottom: 30px;
-    }
-    .cy_team_box img {
-        width: 100%;
-    }
+  
     .cy_achieve_overlay:before {
         width: 132%;
         left: -16%;
