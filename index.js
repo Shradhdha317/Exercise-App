@@ -15,7 +15,8 @@ const port = process.env.PORT || 3000;
 app
     .use(express.json())
     .use(cors())
-    .use(express.static(__dirname + '/'))
+    .use(express.static(__dirname + '/client/dist'))
+    .use("/uploads",express.static(__dirname + '/uploads'))
     .use(async (req, res, next)=>{ 
         
       const token = req.headers.authorization?.split(' ')[1];
@@ -26,12 +27,6 @@ app
     .use('/activtyStore',LoginRequired,activtyController)
     .use('/exerciseStore',LoginRequired,exerciseController)
     .use('/friendList',LoginRequired,friendController)
-
-    // All the way at the end of the pipeline. Return instead of not found
-    .get('*', (req, res) => {
-      res.sendFile( path.join(__dirname, '../Exercise-App/client/public/index.html' ) );
-  })
-
     .use((err, req, res, next)=>{
       if (err.code === "INCORRECT_FILETYPE") {
         res.status(422).json({ error: 'Only images are allowed' });
@@ -44,6 +39,11 @@ app
       res.status(err.code || 500 );
       res.send( { msg: err.msg });
     })
+
+     app.get('*', (req, res) => {
+      res.sendFile( path.join(__dirname, '/client/dist/index.html' ) );
+  })
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
