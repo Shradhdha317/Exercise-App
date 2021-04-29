@@ -16,7 +16,6 @@ app
     .use(express.json())
     .use(cors())
     .use(express.static(__dirname + '/client/dist'))
-    .use("/client/public".express.static(__dirname + '/client/public'))
     .use("/uploads",express.static(__dirname + '/uploads'))
     .use(async (req, res, next)=>{ 
         
