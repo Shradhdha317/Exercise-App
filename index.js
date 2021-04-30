@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 app
     .use(express.json())
     .use(cors())
-    .use(express.static(__dirname + '/client/dist'))
+    .use(express.static(__dirname + './docs'))
     .use("/uploads",express.static(__dirname + '/uploads'))
     .use(async (req, res, next)=>{ 
         
@@ -41,7 +41,7 @@ app
     })
 
      app.get('*', (req, res) => {
-      res.sendFile( path.join(__dirname, '/client/dist/index.html' ) );
+      res.sendFile( path.join(__dirname, './docs/index.html' ) );
   })
 
 

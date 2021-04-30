@@ -4,8 +4,7 @@
   "description": "The server package for fitnesstracker application",
   "scripts": {
     "dev": "nodemon --watch server index.js",
-    "start": "sh ./start.sh",
-    "serve": "vue-cli-service serve"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
