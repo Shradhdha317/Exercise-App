@@ -39,7 +39,7 @@
                             </thead>
                             <tbody>
                                 <tr v-for="(p, i) in activitylist" :key="i">
-                                    <td style="height: 100px; width: 100px"><a href="#"><img :src="getImgUrl(p.file)" alt="cart thumbnail" class="img-fluid"></a></td>
+                                    <td style="height: 100px; width: 100px"><a href="#"><img :src="getImgUrlabc(p.file)" alt="cart thumbnail" class="img-fluid"></a></td>
                                     <td>{{p.activity_name}}</td>
                                     <td>{{p.activity_desc}}</td>
                                     <td>{{p.activity_place}}</td>
@@ -164,7 +164,7 @@ export default {
         this.getActivity();
         this.message = "successfully removed!!"
       },
-    getImgUrl(value) {
+    getImgUrlabc(value) {
         const url = 'https://lit-crag-67775.herokuapp.com/uploads/'+value;
         return url;
     },
