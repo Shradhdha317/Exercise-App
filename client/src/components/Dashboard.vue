@@ -165,7 +165,7 @@ export default {
         this.message = "successfully removed!!"
       },
     getImgUrl(value) {
-        const url = 'http://localhost:3000/uploads/'+value;
+        const url = 'https://lit-crag-67775.herokuapp.com/uploads/'+value;
         return url;
     },
     getActivity()
