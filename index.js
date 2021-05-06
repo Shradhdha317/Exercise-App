@@ -9,6 +9,7 @@ const usersModel = require('./server/models/userModel');
 const activtyController = require('./server/controllers/activty');
 const exerciseController = require('./server/controllers/exercise');
 const friendController = require('./server/controllers/friends');
+const selectController = require('./server/controllers/selectvue');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -24,6 +25,7 @@ app
       next();
     }) 
     .use('/signup',signupController)
+    .use('/selectvue',selectController)
     .use('/activtyStore',LoginRequired,activtyController)
     .use('/exerciseStore',LoginRequired,exerciseController)
     .use('/friendList',LoginRequired,friendController)

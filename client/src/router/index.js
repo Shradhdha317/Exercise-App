@@ -10,6 +10,7 @@ import userList from '../components/userList.vue';
 import activityList from '../components/activityList.vue';
 import exerciseLog from '../components/exerciseLog.vue';
 import showActivity from '../components/showActivity.vue';
+import searchtext from '../components/searchtext.vue';
 //import Session from "../models/Session";
 
 Vue.use(VueRouter)
@@ -43,6 +44,11 @@ const routes = [
     path:'/exerciseLog',
     name:"exerciseLog",
     component:exerciseLog
+  },
+  {
+    path:'/searchtext',
+    name:"searchtext",
+    component:searchtext
   },
   { path: '/showActivity/:id', component: showActivity }
 ]

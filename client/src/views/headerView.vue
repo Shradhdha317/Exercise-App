@@ -110,6 +110,11 @@
                               Admin
                             </router-link>
                             </li>
+                            <li>
+                            <router-link to="/searchtext" class="navbar-item">
+                              Search Textbox
+                            </router-link>
+                            </li>
                             <li v-if="Session.userData">
                             <router-link to="/dashboard" class="navbar-item">
                               Dashboard
