@@ -16,26 +16,18 @@
                      <div id="app">
 
      <table width='100%' >
-       <thead>
+      
+       <tbody>        
          <tr>
-            <th width='10%'></th>
-            <th width='60%'></th>
-            <th width='30%'>Selected Value</th>
-         </tr>
-       </thead>
-       <tbody>
-         
-         <tr>
-            <td>Countries</td>
+            <td>Users::</td>
             <td>
-              <v-select label="name" 
-                 v-model="country" 
-                 :items="country_options" 
-                 @search="fetchOptions" 
-                 @input="selectedOption" >
-              </v-select>
+              <advanced-search
+                v-model="model"
+                :options="user_options"
+                >
+                </advanced-search>
             </td>
-            <td align='center' v-text="country"></td>
+            
          </tr>
        </tbody>
 
@@ -48,23 +40,30 @@
     </div>
 </div>  
 </template>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
-<script src="https://unpkg.com/vuetify@0.15.7/dist/vuetify.js"></script>
-<link href="https://unpkg.com/vuetify@0.15.7/dist/vuetify.min.css" rel="stylesheet"/>
+<style src="vue-advanced-search/dist/AdvancedSearch.css"></style>
 <script>
 import Vue from "vue";
-import vSelect from 'vselect-component'
 import axios from 'axios';
 export const API_ROOT = process.env.VUE_APP_API_ROOT;
-Vue.component("v-select", vSelect);
+import AdvancedSearch from 'vue-advanced-search';
+import { api } from "../models/allFetch";
 export default Vue.extend({
-    data: ()=> ({
-        
-        country: 0,
-        country_options: []
-    }),
+    components: { AdvancedSearch },
+   data () {
+      return {
+        model: null,
+        user_options: [
+        ]
+      }
+   },
+   mounted() {
+         (async ()=>{
+                this.user_options = await api("selectvue");
+            })()
+    },
    methods: {
       fetchOptions: function(search){
+          alert('a');
         var el = this;
         axios.get(API_ROOT+'selectvue/', {
            params: {
@@ -72,10 +71,11 @@ export default Vue.extend({
            }
         })
         .then(function (response) {
-          el.country_options = response.data; 
+          el.user_options = response; 
         });
       },
       selectedOption: function(value){
+           alert('a');
          console.log("value : " + value);
       }
    }

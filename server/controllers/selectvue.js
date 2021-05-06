@@ -1,60 +1,145 @@
 const selectlist = [
     { 
-        id:'1',
-        name:'vijay'
+        value:'1',
+        label:'vijay'
     },
     { 
-        id:'2',
-        name:'shradhdha'
+        value:'2',
+        label:'shradhdha'
     },
     { 
-        id:'3',
-        name:'ridhi'
+        value:'3',
+        label:'rlabelhi'
     },
     { 
-        id:'4',
-        name:'vishal'
+        value:'4',
+        label:'vishal'
     },
     { 
-        id:'5',
-        name:'virin'
+        value:'5',
+        label:'virin'
     },
     { 
-        id:'6',
-        name:'vihana'
+        value:'6',
+        label:'vihana'
     },
     { 
-        id:'7',
-        name:'rinku'
+        value:'7',
+        label:'rinku'
     },
     { 
-        id:'8',
-        name:'ruchi'
+        value:'8',
+        label:'ruchi'
     },
     { 
-        id:'9',
-        name:'dimple'
+        value:'9',
+        label:'dimple'
     },
     { 
-        id:'10',
-        name:'apple'
+        value:'10',
+        label:'apeksha'
     },
     { 
-        id:'11',
-        name:'ball'
+        value:'11',
+        label:'bittu'
     },
     { 
-        id:'12',
-        name:'cat'
+        value:'13',
+        label:'chirag'
     },
     { 
-        id:'13',
-        name:'dog'
+        value:'14',
+        label:'disha'
     },
     { 
-        id:'14',
-        name:'elephant'
-    }
+        value:'15',
+        label:'eric'
+    },
+    { 
+        value:'16',
+        label:'foram'
+    },
+    { 
+        value:'17',
+        label:'gina'
+    },
+    { 
+        value:'18',
+        label:'harsh'
+    },
+    { 
+        value:'19',
+        label:'isha'
+    },
+    { 
+        value:'20',
+        label:'jhalak'
+    },
+    { 
+        value:'21',
+        label:'karan'
+    },
+    { 
+        value:'22',
+        label:'laksh'
+    },
+    { 
+        value:'23',
+        label:'minal'
+    },
+    { 
+        value:'24',
+        label:'nimit'
+    },
+    { 
+        value:'25',
+        label:'omkar'
+    },
+    { 
+        value:'26',
+        label:'pinal'
+    },
+    { 
+        value:'27',
+        label:'quinn'
+    },
+    { 
+        value:'28',
+        label:'rakshit'
+    },
+    { 
+        value:'29',
+        label:'shree'
+    },
+    { 
+        value:'30',
+        label:'tina'
+    },
+    { 
+        value:'31',
+        label:'utkarsh'
+    },
+    { 
+        value:'32',
+        label:'vishnu'
+    },
+    { 
+        value:'33',
+        label:'winnie'
+    },
+    { 
+        value:'34',
+        label:'xoe'
+    },
+    { 
+        value:'35',
+        label:'yaksh'
+    },
+    { 
+        value:'36',
+        label:'zainab'
+    },
+    
 ];
 const express = require('express');
 const app = express.Router();
